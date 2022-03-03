@@ -7,9 +7,9 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - /home/ubuntu/mywork:/home/jovyan/mywork
-      - /home/ubuntu/.ssh:/home/jovyan/.ssh
-      - /home/ubuntu/.gitconfig:/home/jovyan/.gitconfig
-      - /home/ubuntu/.kaggle:/home/jovyan/.kaggle
+      - ./mywork:/home/jovyan/mywork
+      - ~/.ssh:/home/jovyan/.ssh
+      - ~/.gitconfig:/home/jovyan/.gitconfig
+      - ~/.kaggle:/home/jovyan/.kaggle
     command: 
       jupyter lab --ip=0.0.0.0 --no-browser --port=8888 --NotebookApp.token='' --notebook-dir=/home/jovyan
